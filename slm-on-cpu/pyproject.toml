@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "slm-on-cpu"
+version = "0.1.0"
+description = ""
+authors = ["Ibrahim Office PC <142000003+brhmkhn4@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+llama-cpp-python = "^0.2.88"
+ctransformers = "^0.2.27"
+rich = "^13.7.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
