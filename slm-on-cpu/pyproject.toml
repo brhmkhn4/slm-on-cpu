@@ -10,6 +10,7 @@ python = "^3.11"
 llama-cpp-python = "^0.2.88"
 ctransformers = "^0.2.27"
 rich = "^13.7.1"
+langchain = "^0.2.14"
 
 
 [build-system]
