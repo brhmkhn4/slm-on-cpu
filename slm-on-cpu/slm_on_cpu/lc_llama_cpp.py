@@ -4,7 +4,9 @@ from langchain_core.callbacks import CallbackManager, StreamingStdOutCallbackHan
 from langchain_core.prompts import PromptTemplate
 
 # Load the pretrained model
-path = r"C:\Users\brhmk\Downloads\Llama-3.1-8b-Uncensored-Dare.Q2_K.gguf"
+#homelapto
+path= r"C:\Users\brhmk\Downloads\Phi-3-mini-4k-instruct-q4.gguf"
+# path = r"C:\Users\brhmk\Downloads\Llama-3.1-8b-Uncensored-Dare.Q2_K.gguf"
 
 # implementing langchain
 template = """Question: {question}

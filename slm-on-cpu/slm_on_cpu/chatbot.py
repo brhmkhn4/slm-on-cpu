@@ -24,7 +24,7 @@ def get_response(
     }
     # Send POST request to the server
     response = requests.post(
-        f"{server_url}/v1/chat/completions",
+        "http://localhost:8000",
         headers=headers,
         data=json.dumps(data),
         stream=stream,
@@ -75,3 +75,4 @@ def chatbot(
 if __name__ == "__main__":
     server_url = "http://localhost:8080"
     chatbot(server_url=server_url)
+
