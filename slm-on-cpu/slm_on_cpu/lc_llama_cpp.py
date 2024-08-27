@@ -5,7 +5,8 @@ from langchain_core.prompts import PromptTemplate
 
 # Load the pretrained model
 #homelapto
-path= r"C:\Users\brhmk\Downloads\Phi-3-mini-4k-instruct-q4.gguf"
+# path= r"D:\mistral-7b-instruct-v0.2.Q2_K.gguf"
+path= r"D:\Phi-3.5-mini-instruct_Uncensored-IQ3_XS.gguf"
 # path = r"C:\Users\brhmk\Downloads\Llama-3.1-8b-Uncensored-Dare.Q2_K.gguf"
 
 # implementing langchain

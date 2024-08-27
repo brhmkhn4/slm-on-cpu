@@ -2,9 +2,6 @@ import requests
 import json
 from typing import List, Dict
 
-# Load the pretrained model
-path = r"C:\Users\brhmk\Downloads\Llama-3.1-8b-Uncensored-Dare.Q2_K.gguf"
-
 # Function to send a request to the server and get a response
 def get_response(
     server_url: str,
@@ -24,14 +21,14 @@ def get_response(
     }
     # Send POST request to the server
     response = requests.post(
-        "http://localhost:8000",
+        "http://localhost:8080/v1/chat/completions",
         headers=headers,
         data=json.dumps(data),
         stream=stream,
     )
     response.raise_for_status()  # Ensure the request was successful
     if stream:
-        content = ""
+        content = "you are an export manager, i will provide you email, you will read the email and you will improve the email to convert it into a professional email"
         for line in response.iter_lines():
             if line:
                 decoded_line = line.decode("utf-8").lstrip("data: ")
@@ -73,6 +70,5 @@ def chatbot(
         )
         messages.append({"role": "assistant", "content": response})
 if __name__ == "__main__":
-    server_url = "http://localhost:8080"
+    server_url = "http://localhost:8080/v1/chat/completions"
     chatbot(server_url=server_url)
-

@@ -25,6 +25,52 @@ llama-server -m C:\Users\brhmk\Downloads\Phi-3-mini-4k-instruct-q4.gguf -c 1024
 -c flage is for setting tokens, in our case we have set 1024.
 The above command will start a server that by default listens on 127.0.0.1:8080 or localhost:8080 until the terminal is open. You can consume the endpoints with Postman or NodeJS with axios library. You can visit the web front end at the same url.
 
+# Advance usage
+while starting llama.cpp server by terminal use the following flag as per your need, otherwise, server will set default values.
+```cmd
+llama-server -m C:\Users\brhmk\Downloads\Phi-3-mini-4k-instruct-q4.gguf -c 1024
+```
+- -m,    --model FNAME
+  - model path (default: models/$filename with filename from --hf-file
+- -co,   --color 
+  - colorise output to distinguish prompt and user input from generations (default: false)
+- -c,    --ctx-size N
+  - size of the prompt context (default: 0, 0 = loaded from model)
+- -n,    --predict N
+  - number of tokens to predict (default: -1, -1 = infinity, -2 = until context filled)
+- -b,    --batch-size N
+   - logical maximum batch size (default: 2048)
+- -p,    --prompt PROMPT
+   - prompt to start generation with in conversation mode, this will be used as system prompt (default: '')
+- -f,    --file FNAME
+  - a file containing the prompt (default: none)
+- --in-file FNAME
+    -  an input file (repeat to specify multiple files)
+-  -e,    --escape
+   - process escapes sequences (\n, \r, \t, \', \", \\) (default: true)
+- --no-escape
+   - do not process escape sequences
+- --prompt-cache FNAME
+   - file to cache prompt state for faster startup (default: none)
+- --prompt-cache-all 
+   - if specified, saves user input and generations to cache as well not supported with --interactive or other interactive options.
+-  --prompt-cache-ro
+   - if specified, uses the prompt cache but does not update it
+- -r,    --reverse-prompt PROMPT  
+    - halt generation at PROMPT, return control in interactive mode can be specified more than once for multiple prompts.
+- -cnv,  --conversation
+    - run in conversation mode, does not print special tokens and suffix/prefix if suffix/prefix are not specified, default chat template will be used (default: false).
+- -i,    --interactive
+    - run in interactive mode (default: false).
+- -if,   --interactive-first
+    - run in interactive mode and wait for input right away (default: false).
+- -mli,  --multiline-input
+    - allows you to write or paste multiple lines without ending each in '\
+
+# llama-server Endpoints
+
+## 
+
 # for llama-cpp-python installation run the following command in CMD
 ```cmd
 pip install llama-cpp-python  --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu
@@ -33,4 +79,4 @@ You can also download pre built wheel from below url and paste path where the wh
 https://abetlen.github.io/llama-cpp-python/whl/cpu/llama-cpp-python
 ```cmd
 pip install llama-cpp-python --wheel-dir=C:\Users\brhmk\Downloads llama_cpp_python-0.2.89-cp312-cp312-win_amd64
-```
+```********
