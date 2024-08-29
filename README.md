@@ -1,4 +1,4 @@
-# llama cpp installation
+# 1. llama cpp installation (Stand alone LLM server)
 
 llama.cpp runs quantized LLMs in GGUF format on CPUs. It has many modules, in this project we need a server of llama.cpp to run LLM on our PC.
 
@@ -83,10 +83,9 @@ llama-server -m C:\Users\brhmk\Downloads\Phi-3-mini-4k-instruct-q4.gguf -c 1024
 
 # llama-server Endpoints
 
-##
+# 2. llama-cpp-python installation
 
-# for llama-cpp-python installation run the following command in CMD
-
+run the following command in CMD
 ```cmd
 pip install llama-cpp-python  --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu
 ```

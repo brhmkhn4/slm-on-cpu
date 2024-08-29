@@ -2,7 +2,7 @@ import requests
 import json
 from typing import List, Dict
 
-# headers = {"Content-Type": "application/json"}
+headers = {"Content-Type": "application/json"}
 
 prompt = {"prompt":"Building a website can be done in 10 simple steps"}
 
@@ -29,8 +29,8 @@ prompt = {"prompt":"Building a website can be done in 10 simple steps"}
 async def test():
     response = requests.post(
         "http://127.0.0.1:8080/completion",                     
-         data=prompt
-         headers = "Content-Type": "application/json"
+         data=prompt,
+         headers = headers,
         )
 response = test()
 print(response)

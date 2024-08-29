@@ -6,8 +6,8 @@ from langchain_core.prompts import PromptTemplate
 # Load the pretrained model
 #homelapto
 # path= r"D:\mistral-7b-instruct-v0.2.Q2_K.gguf"
-path= r"D:\Phi-3.5-mini-instruct_Uncensored-IQ3_XS.gguf"
-# path = r"C:\Users\brhmk\Downloads\Llama-3.1-8b-Uncensored-Dare.Q2_K.gguf"
+# path= r"D:\Phi-3.5-mini-instruct_Uncensored-IQ3_XS.gguf"
+path = r"C:\Users\brhmk\Downloads\smol_llama-101m-gqa.q6_k.gguf"
 
 # implementing langchain
 template = """Question: {question}
@@ -30,6 +30,6 @@ llm = LlamaCpp(
 )
 
 question = """
-Question: A rap battle between Stephen Colbert and John Oliver
+Question: can you say a poem?
 """
 llm.invoke(question)
